@@ -9,10 +9,11 @@ Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
-BuildRequires:	perl-devel >= 5.6.1
-BuildRequires:	perl-XML-Parser
 BuildRequires:	perl-Storable
+BuildRequires:	perl-XML-Parser >= 2.00
+BuildRequires:	perl-devel >= 5.6.1
+BuildRequires:	rpm-perlprov >= 3.0.3-16
+Requires:	perl-XML-Parser >= 2.00
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,13 +37,12 @@ perl Makefile.PL
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-gzip -9nf README Changes
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README Changes
 %doc %{_mandir}/man3/*
 %{perl_sitelib}/XML/Simple.pm
