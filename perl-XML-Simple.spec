@@ -5,10 +5,10 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
 %define	pnam	Simple
-Summary:	XML::Simple perl module
-Summary(pl):	Modu³ perla XML::Simple
+Summary:	XML::Simple - easy API to read/write XML (esp config files)
+Summary(pl):	XML::Simple - proste API do czytania/pisania XML (zw³. plików konfiguracyjnych)
 Name:		perl-XML-Simple
-Version:	2.03
+Version:	2.04
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
@@ -28,12 +28,14 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-XML::Simple - Trivial API for reading and writing XML (esp config
-files)
+The XML::Simple module provides a simple API layer on top of an
+underlying XML parsing module (either XML::Parser or one of the SAX2
+parser modules).
 
 %description -l pl
-XML::Simple - trywialny interfejs do zapisywania i odczytywania plików
-XML - zw³aszcza plików konfiguracyjnych.
+Modu³ XML::Simple udostêpnia prost± warstwê API w oparciu o zasadniczy
+modu³ analizy XML (albo XML::Parser, albo jeden z modu³ów
+analizuj±cych SAX2).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
