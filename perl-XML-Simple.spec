@@ -2,13 +2,13 @@
 Summary:	XML-Simple perl module
 Summary(pl):	Modu³ perla XML-Simple
 Name:		perl-XML-Simple
-Version:	1.05
-Release:	3
+Version:	1.06
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source0:	ftp://tp.cpan.org/CPAN/authors/id/G/GR/GRANTM/XML-Simple-1.05.tar.gz
+Source0:	ftp://ftp.cpan.org/CPAN/authors/id/G/GR/GRANTM/XML-Simple-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl
 BuildRequires:	perl-XML-Parser
