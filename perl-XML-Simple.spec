@@ -3,7 +3,7 @@ Summary:	XML-Simple perl module
 Summary(pl):	Modu³ perla XML-Simple
 Name:		perl-XML-Simple
 Version:	1.05
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -43,4 +43,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %doc %{_mandir}/man3/*
 %{perl_sitelib}/XML/Simple.pm
-%{perl_sitearch}/auto/XML/Simple/.packlist
