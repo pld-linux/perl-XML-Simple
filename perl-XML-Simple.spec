@@ -12,6 +12,7 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	perl-XML-Parser
+BuildRequires:	perl-Storable
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
