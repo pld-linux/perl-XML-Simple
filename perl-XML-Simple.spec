@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without tests # do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
@@ -8,17 +8,17 @@
 Summary:	XML::Simple - easy API to read/write XML (esp config files)
 Summary(pl):	XML::Simple - proste API do czytania/zapisu XML-a (zw³. plików konfiguracyjnych)
 Name:		perl-XML-Simple
-Version:	2.09
+Version:	2.11
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	7138184cbfe3c1d26c98ff55690a679d
+# Source0-md5:	94e51ad14e348324ef8933fbf8ad9fb2
 BuildRequires:	perl-Storable
 BuildRequires:	perl-XML-Parser >= 2.00
 BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{!?_without_tests:1}0
+%if %{with tests}
 # not really necessary - only to resolve dependencies:
 BuildRequires:	perl-XML-SAX
 %endif
@@ -44,7 +44,7 @@ analizuj±cych SAX2).
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
