@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without tests # do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
@@ -10,7 +10,8 @@ Summary(pl):	XML::Simple - proste API do czytania/zapisu XML-a (zw³. plików konf
 Name:		perl-XML-Simple
 Version:	2.12
 Release:	1
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	001884c8f2f9ccbee61e5e72547309ad
