@@ -8,7 +8,7 @@ Version:	2.02
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl-Storable
 BuildRequires:	perl-XML-Parser >= 2.00
 BuildRequires:	perl-devel >= 5.6.1
