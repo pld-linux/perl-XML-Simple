@@ -1,11 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
 %define	pnam	Simple
-%include	/usr/lib/rpm/macros.perl
 Summary:	XML-Simple perl module
 Summary(pl):	Modu³ perla XML-Simple
 Name:		perl-XML-Simple
 Version:	1.08
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -24,7 +24,7 @@ XML::Simple - trywialny interfejs do zapisywania i odczytywania plików
 XML - zw³aszcza plików konfiguracyjnych.
 
 %prep
-%setup -q -n XML-Simple-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
