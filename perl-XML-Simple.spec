@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
 %define	pnam	Simple
-Summary:	XML-Simple perl module
-Summary(pl):	Modu³ perla XML-Simple
+Summary:	XML::Simple perl module
+Summary(pl):	Modu³ perla XML::Simple
 Name:		perl-XML-Simple
 Version:	1.08
 Release:	3
