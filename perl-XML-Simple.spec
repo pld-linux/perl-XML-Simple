@@ -21,8 +21,6 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{!?_without_tests:1}0
 # not really necessary - only to resolve dependencies:
 BuildRequires:	perl-XML-SAX
-# tests fail if present:
-BuildConflicts:	perl-XML-LibXML-SAX
 %endif
 Requires:	perl-XML-Parser >= 2.00
 BuildArch:	noarch
@@ -51,7 +49,8 @@ analizuj±cych SAX2).
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
