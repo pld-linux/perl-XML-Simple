@@ -6,9 +6,15 @@ Version:	1.06
 Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
+Group(cs):	Vývojové prostøedky/Programovací jazyky/Perl
 Group(de):	Entwicklung/Sprachen/Perl
+Group(es):	Desarrollo/Lenguajes/Perl
+Group(fr):	Development/Langues/Perl
+Group(ja):	³«È¯/¸À¸ì/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source0:	 ftp://ftp.perl.org/pub/CPAN/modules/by-module/XML/XML-Simple-%{version}.tar.gz
+Group(pt):	Desenvolvimento/Linguagens/Perl
+Group(ru):	òÁÚÒÁÂÏÔËÁ/ñÚÙËÉ/Perl
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/XML/XML-Simple-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl
 BuildRequires:	perl-XML-Parser
@@ -16,11 +22,12 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-XML::Simple - Trivial API for reading and writing XML (esp config files)
+XML::Simple - Trivial API for reading and writing XML (esp config
+files)
 
 %description -l pl
-XML::Simple - trywialny interfejs do zapisywania i odczytywania plików XML -
-zw³aszcza plików konfiguracyjnych.
+XML::Simple - trywialny interfejs do zapisywania i odczytywania plików
+XML - zw³aszcza plików konfiguracyjnych.
 
 %prep
 %setup -q -n XML-Simple-%{version}
