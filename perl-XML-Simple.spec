@@ -4,8 +4,8 @@
 Summary:	XML::Simple perl module
 Summary(pl):	Modu³ perla XML::Simple
 Name:		perl-XML-Simple
-Version:	1.08
-Release:	4
+Version:	2.02
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
