@@ -16,7 +16,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 BuildRequires:	perl-Storable
 BuildRequires:	perl-XML-Parser >= 2.00
 BuildRequires:	perl-devel >= 5.6.1
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 %if %{!?_without_tests:1}0
 # not really necessary - only to resolve dependencies:
 BuildRequires:	perl-XML-SAX
