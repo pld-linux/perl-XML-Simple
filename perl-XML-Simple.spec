@@ -12,8 +12,6 @@ Source0:	ftp://tp.cpan.org/CPAN/authors/id/G/GR/GRANTM/XML-Simple-1.05.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl
 BuildRequires:	perl-XML-Parser
-%requires_eq	perl
-Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
