@@ -8,12 +8,12 @@
 Summary:	XML::Simple - easy API to read/write XML (esp config files)
 Summary(pl):	XML::Simple - proste API do czytania/pisania XML (zw³. plików konfiguracyjnych)
 Name:		perl-XML-Simple
-Version:	2.07
+Version:	2.08
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b2603e8defe4f3b77aaed38659c027dd
+# Source0-md5:	b73d4781e6473ff05317cf9209ea2d1c
 BuildRequires:	perl-Storable
 BuildRequires:	perl-XML-Parser >= 2.00
 BuildRequires:	perl-devel >= 5.6.1
