@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	XML
-%define	pnam	Simple
+%define		pdir	XML
+%define		pnam	Simple
 Summary:	XML::Simple - easy API to read/write XML (esp config files)
 Summary(pl):	XML::Simple - proste API do czytania/zapisu XML-a (zw³. plików konfiguracyjnych)
 Name:		perl-XML-Simple
