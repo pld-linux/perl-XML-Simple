@@ -1,10 +1,14 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
 %define	pnam	Simple
 Summary:	XML::Simple perl module
 Summary(pl):	Modu³ perla XML::Simple
 Name:		perl-XML-Simple
-Version:	2.02
+Version:	2.03
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
@@ -13,6 +17,12 @@ BuildRequires:	perl-Storable
 BuildRequires:	perl-XML-Parser >= 2.00
 BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	rpm-perlprov >= 3.0.3-16
+%if %{!?_without_tests:1}0
+# not really necessary - only to resolve dependencies:
+BuildRequires:	perl-XML-SAX
+# tests fail if present:
+BuildConflicts:	perl-XML-LibXML-SAX
+%endif
 Requires:	perl-XML-Parser >= 2.00
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -31,7 +41,8 @@ XML - zw³aszcza plików konfiguracyjnych.
 %build
 perl Makefile.PL
 %{__make}
-%{__make} test
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
