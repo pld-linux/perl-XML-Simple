@@ -20,7 +20,7 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 # not really necessary - only to resolve dependencies:
-BuildRequires:	perl-XML-SAX
+BuildRequires:	perl-XML-SAX-Expat
 %endif
 Requires:	perl-XML-Parser >= 2.00
 BuildArch:	noarch
