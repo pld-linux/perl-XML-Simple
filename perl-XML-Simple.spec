@@ -6,7 +6,7 @@
 %define		pdir	XML
 %define		pnam	Simple
 Summary:	XML::Simple - easy API to read/write XML (esp config files)
-Summary(pl):	XML::Simple - proste API do czytania/zapisu XML-a (zw³. plików konfiguracyjnych)
+Summary(pl.UTF-8):   XML::Simple - proste API do czytania/zapisu XML-a (zwÅ‚. plikÃ³w konfiguracyjnych)
 Name:		perl-XML-Simple
 Version:	2.15
 Release:	1
@@ -31,10 +31,10 @@ The XML::Simple module provides a simple API layer on top of an
 underlying XML parsing module (either XML::Parser or one of the SAX2
 parser modules).
 
-%description -l pl
-Modu³ XML::Simple udostêpnia prost± warstwê API w oparciu o zasadniczy
-modu³ analizy XML-a (albo XML::Parser, albo jeden z modu³ów
-analizuj±cych SAX2).
+%description -l pl.UTF-8
+ModuÅ‚ XML::Simple udostÄ™pnia prostÄ… warstwÄ™ API w oparciu o zasadniczy
+moduÅ‚ analizy XML-a (albo XML::Parser, albo jeden z moduÅ‚Ã³w
+analizujÄ…cych SAX2).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
