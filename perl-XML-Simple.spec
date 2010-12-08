@@ -20,8 +20,7 @@ BuildRequires:	perl-XML-Parser >= 2.00
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-# not really necessary - only to resolve dependencies:
-BuildRequires:	perl-XML-SAX-Expat
+BuildRequires:	perl-Test-Simple >= 0.41
 %endif
 Requires:	perl-XML-Parser >= 2.00
 BuildArch:	noarch
@@ -58,6 +57,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README Changes
+%doc Changes README
 %{perl_vendorlib}/XML/Simple.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/XML::Simple*.3pm*
