@@ -8,21 +8,25 @@
 Summary:	XML::Simple - easy API to read/write XML (esp config files)
 Summary(pl.UTF-8):	XML::Simple - proste API do czytania/zapisu XML-a (zwł. plików konfiguracyjnych)
 Name:		perl-XML-Simple
-Version:	2.18
-Release:	2
+Version:	2.22
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	593aa8001e5c301cdcdb4bb3b63abc33
+# Source0-md5:	0914abddfce749453ed89b54029f2643
 URL:		http://search.cpan.org/dist/XML-Simple/
-BuildRequires:	perl-XML-Parser >= 2.00
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Test-Simple >= 0.41
+BuildRequires:	perl-Test-Simple >= 0.88
+BuildRequires:	perl-XML-NamespaceSupport >= 1.04
+BuildRequires:	perl-XML-SAX >= 0.15
+BuildRequires:	perl-XML-SAX-Expat
 %endif
-Requires:	perl-XML-Parser >= 2.00
+Requires:	perl-XML-NamespaceSupport >= 1.04
+Requires:	perl-XML-SAX >= 0.15
+Requires:	perl-XML-SAX-Expat
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -52,6 +56,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/XML/Simple/FAQ.pod
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -59,4 +65,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorlib}/XML/Simple.pm
-%{_mandir}/man3/XML::Simple*.3pm*
+%{_mandir}/man3/XML::Simple.3pm*
+%{_mandir}/man3/XML::Simple::FAQ.3pm*
